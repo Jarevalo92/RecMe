@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202234310) do
+ActiveRecord::Schema.define(version: 20161203225454) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "sport"
     t.text     "description"
-    t.datetime "date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "zipcode"
     t.integer  "user_id"
+    t.date     "date"
+    t.time     "time"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
