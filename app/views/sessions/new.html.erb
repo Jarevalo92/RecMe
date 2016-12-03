@@ -1,0 +1,44 @@
+<h1>Log In</h1>
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class ="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Log In"%>
+  </div>
+<% end %>
+
+
+<!-- <span><h2>welcome</h2></span>
+<div class="container">
+<form class="form">
+<input type="text" placeholder="user name">
+<input type="password" placeholder="password">
+<input type="button" id="bt" value="log in ">
+</form>
+</div> -->
+
+
+<!-- erb with the login button styling -->
+
+<!--
+<div class = "container">
+<%= form_tag sessions_path, {:class => 'form'} do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class ="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Log In"%>
+  </div>
+<% end %>
+</div> -->
