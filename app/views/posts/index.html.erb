@@ -20,11 +20,10 @@
       <tr>
         <td><%= post.sport %></td>
         <td><%= post.description%></td>
-        <!-- truncate? -->
-        <td><%= post.date.strftime('%x')%></td>
-        <td><%= post.date.strftime('%I:%M %p')%></td>
+        <td><%= post.date%></td>
+        <td><%= post.time%></td>
         <td><%= post.user.name %></td>
-          <td><%= post.zipcode %></td>
+        <td><%= post.zipcode %></td>
         <!-- <td><%= link_to 'Show', post %></td> -->
         <!-- <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

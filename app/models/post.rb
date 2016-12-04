@@ -3,12 +3,15 @@ class Post < ApplicationRecord
   validates :sport, presence: true
   validates :description, presence: true
   validates :zipcode, presence: true
-end
+  validate :date_cannot_be_in_the_past
+  # validate :time_cannot_be_in_the_past
 
-# validate :expiration_date_cannot_be_in_the_past
-#
-#   def expiration_date_cannot_be_in_the_past
-#     if expiration_date.present? && expiration_date < Date.today
-#       errors.add(:expiration_date, "can't be in the past")
-#     end
-#   end  
+  def date_cannot_be_in_the_past
+    errors.add(:date, " cannot be set for the past") if !date.blank? && date < Date.today
+  end
+
+  def time_cannot_be_in_the_past
+    errors.add(:time, "cannot be set for the past") if time.hour < Time.now.hour
+  end
+
+end
