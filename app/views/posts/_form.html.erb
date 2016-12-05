@@ -1,5 +1,7 @@
-<%= bootstrap_form_for(post, label_errors: true) do |f| %>
+<%= bootstrap_form_for(post, label_errors: true, inline_errors: true) do |f| %>
+<% f.alert_message "Please fix the errors below!" %>
   <% if post.errors.any? %>
+
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
@@ -12,7 +14,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :sport %>
+    <%= f.select :sport, ["basketball","beach volleyball", "cycling","golf","rugby", "american soccer", "tennis", "track and field", "american football", "boxing", "canoe/kayak", "diving", "equestrian", "fencing","triathlon"] %>
   </div>
 
   <div class="field">
