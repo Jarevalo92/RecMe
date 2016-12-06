@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'posts#index'
+  root 'posts#homepage'
 
   resources :sessions, only:[:new, :create, :destroy]
 
