@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  resources :sessions, only:[:new, :create, :destroy] do
-    resources :posts
-  end
+  resources :sessions, only:[:new, :create, :destroy]
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -13,9 +11,9 @@ Rails.application.routes.draw do
   resource :users
   resources :posts
 
-  # resources :users, shallow: true do
-  #   resources :posts
-  # end
+  resources :users, shallow: true do
+    resources :posts
+  end
 
 
 
