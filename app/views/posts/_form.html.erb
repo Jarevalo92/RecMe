@@ -14,15 +14,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.select :sport, ["basketball","beach volleyball", "cycling","golf","rugby", "american soccer", "tennis", "track and field", "american football", "boxing", "canoe/kayak", "diving", "equestrian", "fencing","triathlon"] %>
+    <%= f.select :sport, ["basketball","beach volleyball", "cycling","golf","rugby", "american soccer", "tennis", "track and field", "american football", "boxing", "canoe/kayak", "diving", "equestrian", "fencing","triathlon"], {label: "Choose your favorite sport:"} %>
   </div>
 
   <div class="field">
-    <%= f.text_area :description %>
+    <%= f.text_area :description, {label: "some useful information like age group, place, skill level"} %>
   </div>
 
   <div class="field">
-    <%= f.text_field :zipcode %>
+    <%= f.text_field :zipcode, {label:"zipcode please so our computers can do some searching"}  %>
   </div>
 
 
