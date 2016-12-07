@@ -14,7 +14,16 @@ h1 {
 
 }
 
-#user_header{
+/*#user_header{
   text-align: center;
   font-size: 28px;
+}*/
+
+.userlogin{
+  /*float:"right"*/
+}
+
+#user_header{
+  padding-top: 16px;
+  height: 50px;
 }
