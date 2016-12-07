@@ -5,8 +5,12 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
+      marker.lat post.latitude
+      marker.lng post.longitude
+end
   end
-  
+
   def homepage
   end
   # GET /posts/1
@@ -55,7 +59,7 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   # DELETE /posts/1.json
-  def destroy
+  def destroyfo
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -71,6 +75,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:sport, :description, :date, :zipcode, :user_id)
+      params.require(:post).permit(:sport, :description, :date, :address, :user_id)
     end
 end

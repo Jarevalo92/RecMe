@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap_form'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

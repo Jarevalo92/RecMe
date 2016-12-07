@@ -2,7 +2,9 @@ class Post < ApplicationRecord
   belongs_to :user
   validates :sport, presence: true
   validates :description, presence: true
-  validates :zipcode, presence: true
+  validates :address, presence: true
+  geocoded_by :address
+  after_validation :geocode
   validate :date_cannot_be_in_the_past
   # validate :time_cannot_be_in_the_past
 
