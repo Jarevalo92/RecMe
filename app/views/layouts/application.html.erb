@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <title>RecMe</title>
         <%= csrf_meta_tags %>
 
@@ -11,6 +12,8 @@
     <body>
 
 
+        <%= yield %>
+        <div class="useralert">
         <% flash.each do |key, value| %>
         <%= content_tag(:div, class: "alert alert #{key}") do %>
         <p>
@@ -18,6 +21,6 @@
         </p>
         <% end %>
         <% end %>
-        <%= yield %>
+      </div>
     </body>
 </html>
