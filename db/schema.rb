@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20161207223243) do
     t.integer  "user_id"
     t.date     "date"
     t.time     "time"
-    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "address"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
