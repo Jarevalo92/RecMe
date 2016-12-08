@@ -1,3 +1,4 @@
+<div class="container">
 <%= bootstrap_form_for(post, label_errors: true, inline_errors: true) do |f| %>
 <% f.alert_message "Please fix the errors below!" %>
   <% if post.errors.any? %>
@@ -39,5 +40,7 @@
 
   <div class="actions">
     <%= f.submit %>
+    <%= link_to 'Back', posts_path, class:"btn btn-default"%>
   </div>
 <% end %>
+</div>
