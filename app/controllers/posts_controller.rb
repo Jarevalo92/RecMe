@@ -21,6 +21,7 @@ end
   # GET /posts/new
   def new
     @post = Post.new
+    @posts = Post.all
   end
 
   # GET /posts/1/edit
@@ -30,6 +31,7 @@ end
   # POST /posts
   # POST /posts.json
   def create
+    @posts = Post.all
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     respond_to do |format|
