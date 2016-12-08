@@ -22,6 +22,10 @@ h1 {
 
 }
 
+#img  {
+  border: 2px;
+}
+
 /*#user_header{
   text-align: center;
   font-size: 28px;
