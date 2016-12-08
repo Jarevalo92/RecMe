@@ -20,4 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+<<<<<<< HEAD
 /RecMe/garbage_code.txt
+=======
+/garbage_code.txt
+>>>>>>> 95ee69ab066a2635c7c50423f703e7e2f1809bee
