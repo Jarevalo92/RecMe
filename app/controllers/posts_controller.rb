@@ -13,6 +13,7 @@ end
 
   def homepage
   end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -31,7 +32,7 @@ end
   # POST /posts
   # POST /posts.json
   def create
-    @posts = Post.all
+      @posts = Post.all
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     respond_to do |format|
@@ -61,7 +62,7 @@ end
 
   # DELETE /posts/1
   # DELETE /posts/1.json
-  def destroyfo
+  def destroy
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
