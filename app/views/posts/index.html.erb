@@ -53,7 +53,6 @@
         </table>
     </div>
 </div>
-<div class= "container">
   <div style='width: 800px;'>
       <div id="map" style='width: 800px; height: 400px;'></div>
   </div>
@@ -70,4 +69,6 @@
           handler.fitMapToBounds();
       });
   </script>
-</div>
+  <script>
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  </script>
