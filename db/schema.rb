@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20161207223243) do
-
-ActiveRecord::Schema.define(version: 20161207210850) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "sport"
@@ -23,9 +20,9 @@ ActiveRecord::Schema.define(version: 20161207210850) do
     t.integer  "user_id"
     t.date     "date"
     t.time     "time"
-    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "address"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

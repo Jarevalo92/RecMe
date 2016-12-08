@@ -4,6 +4,14 @@ h1 {
 
 }
 
+.row  {
+  background-color: #1B75BB;
+}
+
+.telephone{
+  color: white;
+}
+
 #im {
     position: absolute;
     height: 100vh;
