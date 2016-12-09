@@ -22,7 +22,6 @@
                   Logged in as
                   <%= current_user.name %>
                   <%= link_to "Log Out", logout_path %>
-                  <%= link_to 'New Post', new_post_path %>
                   <%= link_to 'All Postings', posts_path %>
                 <% else %>
                   <%= link_to "Sign Up", signup_path %>
