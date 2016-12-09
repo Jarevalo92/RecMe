@@ -5,10 +5,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.last(7)
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude
+    sleep 0.10
 end
   end
 
@@ -23,7 +24,7 @@ end
   # GET /posts/new
   def new
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.last(7)
   end
 
   # GET /posts/1/edit
@@ -33,7 +34,7 @@ end
   # POST /posts
   # POST /posts.json
   def create
-      @posts = Post.all
+    @posts = Post.last(7)
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     respond_to do |format|

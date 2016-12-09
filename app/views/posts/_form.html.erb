@@ -1,46 +1,43 @@
 <div class="container">
-<%= bootstrap_form_for(post,remote: true, label_errors: true, inline_errors: true) do |f| %>
-<% f.alert_message "Please fix the errors below!" %>
-  <% if post.errors.any? %>
+    <%= bootstrap_form_for(post,remote: true, label_errors: true, inline_errors: true) do |f| %>
+    <% f.alert_message "Please fix the errors below!" %>
+    <% if post.errors.any? %>
 
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <h2><%= pluralize(post.errors.count, "error") %>
+            prohibited this post from being saved:</h2>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+            <% post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.select :sport, ["basketball","beach volleyball", "cycling","golf","rugby", "american soccer", "tennis", "track and field", "american football", "boxing", "canoe/kayak", "diving", "equestrian", "fencing","triathlon"], {label: "Choose your favorite sport:"} %>
-  </div>
+    <div class="field">
+        <%= f.select :sport, ["American Football","Basketball","Beach Volleyball", "Boxing","Canoe/Kayak", "Cycling","Diving","Equestrian","Fencing","Fútbol","Golf","Rugby", "Tennis", "Track and Field", "Triathlon","Weightlifting"], {label: "Which Sport are we playing?"} %>
+    </div>
 
-  <div class="field">
-    <%= f.text_area :description, {label: "some useful information like age group, place, skill level"} %>
-  </div>
+    <div class="field">
+        <%= f.text_area :description, {label: "some useful information like age group, place, skill level"} %>
+    </div>
 
-  <div class="field">
-    <%= f.text_field :address, {label:"address or name of location please so our computers can do some searching"}  %>
-  </div>
+    <div class="field">
+        <%= f.text_field :address, {label:"address or name of location please so our computers can do some searching"}  %>
+    </div>
 
+    <div class="field">
+        <%= f.date_select :date %>
+    </div>
 
-  <div class="field">
-    <%= f.date_select :date %>
-  </div>
+    <div class="field">
+        <%= f.time_select :time, {ampm: true, minute_step: 15} %>
+    </div>
 
-  <div class="field">
-    <%= f.time_select :time, {ampm: true, minute_step: 15} %>
-  </div>
-
-
-
-
-  <div class="actions">
-    <%= f.submit %>
-    <%= link_to 'Back', posts_path, class:"btn btn-default"%>
-  </div>
-<% end %>
+    <div class="actions">
+        <%= f.submit %>
+        <%= link_to 'Back', posts_path, class:"btn btn-default"%>
+    </div>
+    <% end %>
 </div>
