@@ -4,3 +4,9 @@
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #color;
 }
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: yellow;
+    color: yellow;
+}

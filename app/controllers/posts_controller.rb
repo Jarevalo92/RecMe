@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.last(7)
+    @posts = Post.all.sample(7)
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude

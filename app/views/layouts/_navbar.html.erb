@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" style="background-color:yellow;">
+<nav class="navbar navbar" style="background-color:yellow;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,28 +8,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "RecMe","/", {:class =>"navbar-brand"}%>
-
+      <a href="/" class="navbar-brand" style="font-size:30px;">RecMe</a>
 
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Contact<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Who We Are</a></li>
+        <li><a style="font-size:22px;" href="#">Contact<span class="sr-only">(current)</span></a></li>
+        <li><a style="font-size:22px;" href="#">About Us</a></li>
+        <li><a style="font-size:22px;" href="#">Who We Are</a></li>
+        <li><a style="font-size:22px" href="/posts">All Postings</a></li>
          <li><div id="user_header">
               <% if current_user %>
                   Logged in as
-                  <%= current_user.name %>
+                <text style="font-size:22px;"><%= current_user.name %></text> 
                   <%= link_to "Log Out", logout_path %>
-                  <%= link_to 'All Postings', posts_path %>
                 <% else %>
-                  <%= link_to "Sign Up", signup_path %>
+                  <%= link_to "Sign Up", signup_path%>
                   or
                   <%= link_to "Log In", login_path %>
-                  <%= link_to 'All Postings', posts_path %>
                 <% end %>
               </div>
             </li>
