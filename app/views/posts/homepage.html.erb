@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html lang="en" class="">
     <head>
         <style type="text/css">
@@ -17,7 +18,7 @@
 
         </style>
     </head>
-    <body class="landing lp_a">
+    <body>
         <div class="container-fluid" id="header-section">
             <div class="row">
                 <div class="container">
@@ -25,30 +26,30 @@
                         <header>
                             <hgroup>
                                 <h1>
-                                    <a href="/" title="Return to Home Page">
-                                        <!-- <img alt="RecMe Inc" src="app/assests/images/14"> -->
-                                        <%= image_tag('testpicture.jpg') %>
-                                    </a>
+                                    <%= link_to image_tag('testpicture.jpg'), posts_path %>
                                 </h1>
-                                <h2 class="tel">
-                                    <span class="glyphicon glyphicon-earphone"></span>
-                                    <span class="telephone" rel="nofollow">1-800-REC-MELIVE</a>
-                                    <span>24/7</span>
-                                </h2>
-                            </hgroup>
-                        </header>
-                    </div>
+                                <div class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+                                    <h2 class="tel">
+                                        <span class="glyphicon glyphicon-earphone blue"></span>
+                                        <span class="telephone" rel="nofollow">1-800-REC-MELIVE</a>
+                                        <span>24/7</span>
+                                    </span>
+                                </div>
+                            </h2>
+                        </hgroup>
+                    </header>
                 </div>
             </div>
-            <div class="row">
-                <div>
-                    <div class="col-md-12">
-                        <section id="top-banner">
-                            <div class="col-sm-3 col-sm-12 col-xs-8">
-                                <div class="col-sm-3">
-                                    <div class="feature1">
-                                        <img src="http://a.espncdn.com/photo/2014/0918/nfl_a_ChancellorThomas_sk_600.jpg" alt="Football" style="width:304px;height:228px;" style="PADDING-RIGHT: 5px"></img>
-                                    </span>
+        </div>
+        <div class="row">
+            <div>
+                <div class="col-md-12">
+                    <section id="top-banner">
+                        <div class="col-sm-3 col-sm-12 col-xs-8">
+                            <div class="col-sm-3">
+                                <div class="feature1">
+                                    <img src="http://a.espncdn.com/photo/2014/0918/nfl_a_ChancellorThomas_sk_600.jpg" alt="Football" style="width:304px;height:228px;" style="PADDING-RIGHT: 5px"></img>
+
                                 </div>
                             </div>
                             <div class="col-sm-3">
@@ -57,58 +58,39 @@
                                 </div>
                             </div>
                             <div class="col-sm-3">
-                              <div class="feature4">
-                                <img src="http://www.collegescholarships.org/images/soccerscholarships.jpg" alt="Soccer" style="width:304px;height:228px;"></img>
-                              </div>
+                                <div class="feature4">
+                                    <img src="http://www.collegescholarships.org/images/soccerscholarships.jpg" alt="Soccer" style="width:304px;height:228px;"></img>
+                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="feature4">
                                     <img src="http://freetaxusashootout.com/wp-content/uploads/2015/11/MJ.jpg" alt="Basketball" style="width:304px;height:228px;"></img>
-                                <h2>Online Registration</h2>
-                                <p>Register online to your local sports center for games!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="container why-teampages">
-            <div class="content-wrapper">
-                <div class="col-lg-6 col-md-4">
+                    </section>
+                </div>
+                <div id="why" class="col-lg-8 col-xs-12 col-s-8 col-md-6">
                     <section id="why-teampages">
-                        <h4>Why should you choose RecMe?</h4>
+                        <h4 style='font-size:50px'>Why should you choose RecMe?</h4>
                         <ul>
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <p>Social media app that allows a user to interact with other users and organizations while leaving real time descriptions!</p>
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <p>Save time and money on communication</p>
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <p>It takes the users location, allows them to view the sports events around them, and sign up --- all from one place</p>
-                            <span class="glyphicon glyphicon-ok"></span>
-                            <p>We welcome athletes of all ages! There is something for everyone!</p>
-                        </ul>
 
+                            <p style='font-size:20px'><span class="glyphicon glyphicon-ok check"></span>Social media app that allows a user to interact with other users and organizations while leaving real time descriptions!</p>
+
+                            <p style='font-size:20px'><span class="glyphicon glyphicon-ok check"></span>Save time and money on communication</p>
+
+                            <p style='font-size:20px'><span class="glyphicon glyphicon-ok check"></span>It takes the users location, allows them to view the sports events around them, and sign up --- all from one place</p>
+
+                            <p style='font-size:20px'><span class="glyphicon glyphicon-ok check"></span>We welcome athletes of all ages! There is something for everyone!</p>
+                        </ul>
                     </section>
                 </div>
-                <div class="col-lg-6 col-md-8">
-                    <section id="fillable-form">
-                        <div id="form">
-                            <a class="cta2" href="#form">
-                                <hgroup>
-
-                                    <!-- <img alt="downward arrow" src="/assets/x/lp/cta_arrow-4994a588331ba15eaa9d1d13e37a62c0.png"> -->
-                                </hgroup>
-                            </a>
-
-                        </div>
-
-
-                    </section>
+                <div class="col-lg-4 col-xs-12 col-s-4 col-md-6">
+                    <h2 style="font-size:50px; color:white">Online Registration</h2>
+                    <p style="font-size:20px; color:white">Register online to your local sports center for games!</p>
+                    <a href="/signup" style="font-size:20px; color:yellow">"Sign Up Today!"</a>
                 </div>
             </div>
         </div>
     </div>
+</html>
