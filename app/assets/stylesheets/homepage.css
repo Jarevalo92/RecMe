@@ -1,25 +1,22 @@
+
 h1 {
-  
+
   text-align: center;
 
 }
 
-.row  {
+/*.row  {
   background-color: #1B75BB;
-}
+}*/
 
 .telephone,.feature4,#why{
-  color: white;
+  color: yellow;
   font-size: 30px;
 
 }
 
-.check{
-  font-size: 45px;
-}
-
 .blue{
-  color:white;
+  color:yellow;
 
 }
 
@@ -40,4 +37,20 @@ h1 {
 
 .why{
 
+}
+
+li#chris {
+    display: block;
+}
+
+li:before#chris {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e013";
+    font-family: 'Glyphicons Halflings';
+    font-size: 30px;
+    float: left;
+    margin-top: 5px;
+    margin-left: -10px;
+    margin-right: 10px;
+    color: yellow;
 }

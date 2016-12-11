@@ -1,18 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-seed_users = [
-  ["Josh", "Josh@gmail.com","password","password"],
-  ["Bill", "Bill@gmail.com","password","password"],
-  ["Luke", "Luke@gmail.com","password","password"],
-  ["Carl", "Carl@gmail.com","password","password"]
-]
-
-seed_users.each do |name,email,password,password_confirmation|
-  User.create(name:name, email:email, password:password, password_confirmation:password_confirmation)
-end
+Post.create!([
+                 { sport: 'track and field', description: 'octo genarians', user_id: 1, date: '2016-12-07', time: nil, address: 'holiday park', latitude: 41.5251491, longitude: -74.12703739999999 },
+                 { sport: 'basketball', description: 'youth', user_id: 1, date: '2016-12-08', time: nil, address: 'Broward college', latitude: 30.4405729, longitude: -84.2933887 },
+                 { sport: 'rugby', description: '4 on 4', user_id: 3, date: '2016-12-08', time: nil, address: 'South Beach miami', latitude: 25.7826123, longitude: -80.1340772 },
+                 { sport: 'american soccer', description: 'We meet every week on Fridays at 7:00 PM', user_id: 4, date: '2016-12-10', time: nil, address: 'Stranahan Park ', latitude: 26.1217474, longitude: -80.1426839 },
+                 { sport: 'american football', description: 'We play flag football every saturday at 1:00 pm at the citrus bowl practice fields. ', user_id: 4, date: '2016-12-11', time: nil, address: 'Citrus Bowl Orlando ', latitude: nil, longitude: nil },
+                 { sport: 'golf', description: 'Actually hot chicken blog whatever freegan williamsburg fap lyft, distillery raclette street art meggings selvage selfies authentic. Pinterest lo-fi bespoke sartorial pour-over coloring book. Offal celiac mumblecore yuccie, craft beer brooklyn 8-bit kale chips kinfolk venmo. Air plant organic before they sold out, jianbing chillwave YOLO pop-up master cleanse skateboard vice brunch wayfarers plaid intelligentsia put a bird on it. Fashion axe chambray quinoa biodiesel before they sold out brunch, pabst blog hella bicycle rights keytar listicle four loko humblebrag. Portland vice pug, ethical polaroid gentrify hot chicken leggings sustainable vegan pinterest. Trust fund blog put a bird on it wolf sustainable mlkshk.', user_id: 4, date: '2016-12-09', time: nil, address: 'Mar a lago West Palm Beach', latitude: nil, longitude: nil },
+                 { sport: 'basketball', description: 'Actually hot chicken blog whatever freegan williamsburg fap lyft, distillery raclette street art meggings selvage selfies authentic. Pinterest lo-fi bespoke sartorial pour-over coloring book. Offal celiac mumblecore yuccie, craft beer brooklyn 8-bit kale chips kinfolk venmo. Air plant organic before they sold out, jianbing chillwave YOLO pop-up master cleanse skateboard vice brunch wayfarers plaid intelligentsia put a bird on it. Fashion axe chambray quinoa biodiesel before they sold out brunch, pabst blog hella bicycle rights keytar listicle four loko humblebrag. Portland vice pug, ethical polaroid gentrify hot chicken leggings sustainable vegan pinterest. Trust fund blog put a bird on it wolf sustainable mlkshk.', user_id: 4, date: '2016-12-09', time: nil, address: 'broward park', latitude: nil, longitude: nil },
+                 { sport: 'basketball', description: 'Fashion axe chambray quinoa biodiesel before they sold out brunch, pabst blog hella bicycle rights keytar listicle four loko humblebrag. Portland vice pug, ethical polaroid gentrify hot chicken leggings sustainable vegan pinterest. Trust fund blog put a bird on it wolf sustainable mlkshk.', user_id: 4, date: '2016-12-09', time: nil, address: 'Galleria mall', latitude: nil, longitude: nil },
+                 { sport: 'tennis', description: 'Fashion axe chambray quinoa biodiesel before they sold out brunch, pabst blog hella bicycle rights keytar listicle four loko humblebrag. Portland vice pug, ethical polaroid gentrify hot chicken leggings sustainable vegan pinterest. Trust fund blog put a bird on it wolf sustainable mlkshk.', user_id: 4, date: '2016-12-09', time: nil, address: 'Stranahan Park', latitude: 26.1217474, longitude: -80.1426839 },
+                 { sport: 'golf', description: "Distillery vaporware normcore, salvia banh mi godard vice pinterest la croix meditation williamsburg. Microdosing hot chicken lyft, VHS art party intelligentsia green juice vape helvetica stumptown mlkshk kale chips meditation. Vexillologist etsy beard, kombucha you probably haven't heard of them succulents knausgaard snackwave blog. Vexillologist flexitarian cardigan yuccie tumblr raw denim, lomo keytar keffiyeh readymade copper mug mumblecore. Kale chips mlkshk cornhole, keffiyeh plaid wolf hashtag. Irony plaid letterpress cardigan bushwick hexagon cornhole, 90's mumblecore next level blue bottle deep v glossier slow-carb pug. Fixie seitan lomo synth drinking vinegar.", user_id: 4, date: '2016-12-09', time: nil, address: 'Jacaranda Golf Club ', latitude: nil, longitude: nil },
+                 { sport: 'golf', description: "Distillery vaporware normcore, salvia banh mi godard vice pinterest la croix meditation williamsburg. Microdosing hot chicken lyft, VHS art party intelligentsia green juice vape helvetica stumptown mlkshk kale chips meditation. Vexillologist etsy beard, kombucha you probably haven't heard of them succulents knausgaard snackwave blog. Vexillologist flexitarian cardigan yuccie tumblr raw denim, lomo keytar keffiyeh readymade copper mug mumblecore. Kale chips mlkshk cornhole, keffiyeh plaid wolf hashtag. Irony plaid letterpress cardigan bushwick hexagon cornhole, 90's mumblecore next level blue bottle deep v glossier slow-carb pug. Fixie seitan lomo synth drinking vinegar.", user_id: 4, date: '2016-12-09', time: nil, address: 'Lago Mar golf club', latitude: nil, longitude: nil },
+                 { sport: 'canoe/kayak', description: 'row the boat', user_id: 2, date: '2016-12-09', time: nil, address: 'Lake Okeechobee', latitude: 26.9689536, longitude: -80.79758340000001 },
+                 { sport: 'Diving', description: 'High dive baby', user_id: 2, date: '2016-12-15', time: nil, address: 'Swimming Hall of Fame ', latitude: nil, longitude: nil },
+                 { sport: 'Canoe/Kayak', description: 'I need to borrow your boat man', user_id: 2, date: '2016-12-09', time: nil, address: 'Lake Okeechobee', latitude: 26.9689536, longitude: -80.79758340000001 },
+                 { sport: 'American Football', description: 'flag football for 60 year olds ', user_id: 2, date: '2016-12-09', time: nil, address: 'Stranahan Park ', latitude: 26.1217474, longitude: -80.1426839 },
+                 { sport: 'Equestrian', description: "I don't have a Horse tho", user_id: 5, date: '2016-12-13', time: nil, address: 'Davie ', latitude: 26.0764783, longitude: -80.25211569999999 },
+                 { sport: 'Beach Volleyball', description: 'Bathing suits optional', user_id: 4, date: '2016-12-17', time: nil, address: 'Fort Lauderdale Beach', latitude: 26.1120152, longitude: -80.1048193 },
+                 { sport: 'Golf', description: 'with Tiger Woods', user_id: 3, date: '2016-12-12', time: nil, address: 'Augusta National ', latitude: nil, longitude: nil },
+                 { sport: 'Diving', description: 'Gotta practice the triple dip', user_id: 1, date: '2016-12-12', time: nil, address: 'Lake Okeechobee', latitude: 26.9689536, longitude: -80.79758340000001 }
+             ])
+User.create!([
+                 { name: 'Josh', email: 'Josh@gmail.com', password_digest: '$2a$10$V4BVz2697e5E6FmbYxY0HedLRXs1LYza3ezPI41Zvb0nnWmpiFBZW' },
+                 { name: 'Bill', email: 'Bill@gmail.com', password_digest: '$2a$10$lft1goT5Pz9jgMMZ4voJMun8L9n/q80HEVS929Chh9rGVMrOaEez.' },
+                 { name: 'Luke', email: 'Luke@gmail.com', password_digest: '$2a$10$qeHvxhAfZrn/uj0WR8a7re/Uv0P2bWOVcQ2Et/VfKxLaqBiFCUoJi' },
+                 { name: 'Carl', email: 'Carl@gmail.com', password_digest: '$2a$10$DB.cbu7yIAb5Tth3aviqMuRIaqnsu4I5x03FjF8X0Fd3KddTlJcJy' },
+                 { name: 'Nigell', email: 'Nigell@gmail.com', password_digest: '$2a$10$qMpy74u94tWa8gZ3HA1h/OruGXR49fEhu2P0EUfmWIHwmCTv/uDui' }
+             ])

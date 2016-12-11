@@ -17,6 +17,7 @@ gem 'google-api-client', '~> 0.9'
 gem 'geocoder'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'seed_dump'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -17,17 +17,17 @@
       <ul class="nav navbar-nav">
         <li><a style="font-size:22px;" href="#">Contact<span class="sr-only">(current)</span></a></li>
         <li><a style="font-size:22px;" href="#">About Us</a></li>
-        <li><a style="font-size:22px;" href="#">Who We Are</a></li>
+
         <li><a style="font-size:22px" href="/posts">All Postings</a></li>
          <li><div id="user_header">
               <% if current_user %>
-                  Logged in as
-                <text style="font-size:22px;"><%= current_user.name %></text> 
-                  <%= link_to "Log Out", logout_path %>
+                <text style="font-size:20px;">Logged in as:</text> &nbsp;
+                <text style="font-size:25px; color:#000033"><%= current_user.name %> <span class="glyphicon glyphicon-user"></span></text> &nbsp;
+                <text style="font-size:20px;"> <%= link_to "Log Out", logout_path %></text>
                 <% else %>
-                  <%= link_to "Sign Up", signup_path%>
-                  or
-                  <%= link_to "Log In", login_path %>
+                  <text style="font-size:22px"><%= link_to "Sign Up", signup_path%></text>
+                  <text style="font-size:20px">or</text>
+                  <text style="font-size:22px"><%= link_to "Log In", login_path %></text>
                 <% end %>
               </div>
             </li>
