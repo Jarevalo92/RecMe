@@ -29,7 +29,7 @@
                     <td><%= post.sport %></td>
                     <td><%= truncate(post.description, length: 100)%></td>
                     <td><%= post.date%></td>
-                    <td><%= post.time%></td>
+                    <td><%= post.time.strftime"%I:%M %P" %></td>
                     <td><%= post.user.name %></td>
                     <td><%= post.address %></td>
                 </tr>
@@ -37,11 +37,13 @@
             </tbody>
         </table>
     </div>
+    <%= render 'form', post: @post %>
+    <div class="col-md-8 col-offset-2" id="map" style="width: 720px; height: 400px; float:center;"></div>
+
 </div>
 
-<%= render 'form', post: @post %>
 
-    <div id="map" style="width: 720px; height: 400px; float:center;"></div>
+
     <script type="text/javascript">
         handler = Gmaps.build('Google');
         handler.buildMap({
