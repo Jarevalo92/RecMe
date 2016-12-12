@@ -41,8 +41,7 @@
 
 <%= render 'form', post: @post %>
 
-<div class="container">
-    <div id="map" class="col-md-12" style='width: 800px; height: 400px;'></div>
+    <div id="map" style="width: 720px; height: 400px; float:center;"></div>
     <script type="text/javascript">
         handler = Gmaps.build('Google');
         handler.buildMap({
@@ -56,4 +55,3 @@
             handler.fitMapToBounds();
         });
     </script>
-    <script>

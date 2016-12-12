@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   validates :description, presence: true
   validates :address, presence: true
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocodeπ
   validate :date_cannot_be_in_the_past
   # validate :time_cannot_be_in_the_past
 
