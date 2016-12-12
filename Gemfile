@@ -32,7 +32,7 @@ gem 'hirb'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap_form'
 gem 'gmaps4rails'
-gem 'pg'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
